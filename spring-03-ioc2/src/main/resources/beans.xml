@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 头部约束：必须写，固定格式 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 👇 在这里写你的 Bean 配置 -->
+    <bean id="user" class="com.example.User">
+        <property name="name" value="Spring"/>
+    </bean>
+
+    <!--第一种，下标赋值-->
+    <bean id="user1" class="com.example.User">
+        <constructor-arg index="0" value="index"/>
+    </bean>
+
+    <!--第二种，类型赋值 不建议使用！比如有两个相同类型的入力参数-->
+    <bean id="user2" class="com.example.User">
+        <constructor-arg type="java.lang.String" value="type"/>
+    </bean>
+
+    <!--第三种，通过参数名赋值-->
+    <bean id="user3" class="com.example.User">
+        <constructor-arg name="name" value="name-value"/>
+    </bean>
+
+
+
+</beans>

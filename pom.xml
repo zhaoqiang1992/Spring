@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 项目信息 -->
+    <groupId>com.example</groupId>
+    <artifactId>spring-demo</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>spring-01-ioc1</module>
+        <module>spring-04-dl1</module>
+        <module>spring-05-autowired</module>
+        <module>spring-07-appconfig</module>
+        <module>spring-08-proxy</module>
+        <module>Spring-09-aop</module>
+        <module>spring-10-mybatis</module>
+        <module>spring-10-mybatis-zhenghe1</module>
+        <module>spring-11-trancation</module>
+        <module>spring-02-hellospring</module>
+        <module>spring-03-ioc2</module>
+        <module>spring-06-annotation</module>
+    </modules>
+
+    <!-- Spring 核心依赖 -->
+    <dependencies>
+        <!-- Spring 核心容器 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.3.39</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+
+</project>

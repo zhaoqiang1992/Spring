@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 👇 在这里写你的 Bean 配置 -->
+    <bean id="cat" class="com.example.Cat"/>
+    <bean id="dog" class="com.example.Dog"/>
+    <!-- byName bean自动装配
+        byName:会自动在容器上下文中查找，和自己对象set方法后面的值对应的bean的id
+        需要保证所有bean的id唯一，并且这个bean需要和自动注入的属性的set方法的值一致
+    -->
+    <!--<bean id="people" class="com.example.People" autowire="byName">
+        <property name="name" value="zhaoxuan"/>
+    </bean>-->
+
+    <!-- byType bean自动装配
+        byType:会自动在容器上下文中查找，和自己对象属性类型相同的bean
+        需要保证所有bean的class唯一，并且这个bean需要和自动注入的属性的类型一致
+    -->
+    <!--<bean id="people2" class="com.example.People" autowire="byType">
+        <property name="name" value="zhaoxuan"/>
+    </bean>-->
+
+    <!--注解注入-->
+    <!--开启注解支持-->
+    <!--Autowired注解可以在属性上使用，也可以在set方法上使用
+    使用Autowired注解，我们可以不编写set方法了，前提是你这个自动装配的属性在IOC（Spring）容器中存在，且符合名字ByName-->
+    <context:annotation-config/>
+    <bean id="people" class="com.example.People"/>
+</beans>

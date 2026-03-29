@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 头部约束：必须写，固定格式 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 👇 在这里写你的 Bean 配置 -->
+    <bean id="student" class="com.example.Student">
+
+        <property name="name" value="xxxx"/>
+
+        <property name="address" ref="address"/>
+        <property name="books">
+            <array>
+                <value>三国演义</value>
+                <value>西游记</value>
+                <value>红楼梦</value>
+                <value>水浒传</value>
+            </array>
+        </property>
+
+        <property name="hobbys">
+            <list>
+                <value>听歌</value>
+                <value>看电影</value>
+            </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="身份证" value="1111111111111"/>
+                <entry key="银行卡" value="2222222222222"/>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>BOB</value>
+            </set>
+        </property>
+        <property name="wife">
+            <null/>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="学号">31100415</prop>
+                <prop key="性别">男</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="address" class="com.example.Address">
+        <property name="address" value="yyyyy"/>
+    </bean>
+
+    <import resource="userBeans.xml"/>
+</beans>
