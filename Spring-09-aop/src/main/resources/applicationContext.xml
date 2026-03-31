@@ -15,8 +15,10 @@
 
     <!-- 方式1：使用原生Spring API接口 -->
     <!-- 配置AOP：需要导入aop的约束 -->
-    <!--<aop:config>
+<!--    <aop:config>
         &lt;!&ndash; 切入点： expression：表达式  execution(需要执行的位置！ * * * * *)&ndash;&gt;
+        &lt;!&ndash;execution( 修饰符? 返回值类型 包名.类名.方法名(参数类型) throws 异常? )&ndash;&gt;
+        &lt;!&ndash;(..)：任意参数&ndash;&gt;
         <aop:pointcut id="pointcut" expression="execution(* com.example.UserServiceImpl.*(..))"/>
 
         &lt;!&ndash; 执行环绕增加&ndash;&gt;

@@ -2,7 +2,7 @@ package com.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import javax.annotation.Resource;
+//import javax.annotation.Resource;
 
 public class People {
     /*
@@ -18,9 +18,9 @@ public class People {
 
     // 如果Autowired自动装配的环境比较复杂，自动装配无法通过一个注解【Autowired】完成的时候
     // 我们可以使用@Qualifier(value = "dog")去配合Autowired的使用，指定一个唯一的bean对象注入
- /*   @Autowired
-    @Qualifier(value = "dog")*/
-    @Resource(name = "dog")
+    @Autowired
+    @Qualifier(value = "dog")
+    //@Resource(name = "dog")
     private Dog dog;
     private String name;
 

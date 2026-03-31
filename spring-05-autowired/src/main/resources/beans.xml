@@ -9,7 +9,7 @@ http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- 👇 在这里写你的 Bean 配置 -->
-    <bean id="cat" class="com.example.Cat"/>
+    <bean id="cat1" class="com.example.Cat"/>
     <bean id="dog" class="com.example.Dog"/>
     <!-- byName bean自动装配
         byName:会自动在容器上下文中查找，和自己对象set方法后面的值对应的bean的id
@@ -30,7 +30,7 @@ http://www.springframework.org/schema/context
     <!--注解注入-->
     <!--开启注解支持-->
     <!--Autowired注解可以在属性上使用，也可以在set方法上使用
-    使用Autowired注解，我们可以不编写set方法了，前提是你这个自动装配的属性在IOC（Spring）容器中存在，且符合名字ByName-->
+    使用Autowired注解，我们可以不编写set方法了，前提是你这个自动装配的属性在IOC（Spring）容器中存在，且符合名字ByType-->
     <context:annotation-config/>
     <bean id="people" class="com.example.People"/>
 </beans>
